@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="alerts.css">
+    <title>ELTORO SLMS Alerts</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Side Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>ELTORO SLMS</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><span>Dashboard</span></a></li>
+                <li><a href="boards.html"><span>Boards</span></a></li>
+                <li class="active-link"><a href="alerts.html"><span>Alerts</span></a></li>
+                <li><a href="analytics.html"><span>Analytics</span></a></li>
+                <li><a href="#"><span>Settings</span></a></li>
+            </ul>
+            <div class="logout">
+                <a href="login.html"><span>Log out</span> <i class="logout-icon"></i></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-nav">
+                <h2>Active Alerts</h2>
+                <div class="profile">
+                    <div class="profile-icon">
+                        <i class="user-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts Content -->
+            <div class="alerts-content">
+                <div class="alerts-header">
+                    <h3>Alerts</h3>
+                    <div class="alerts-actions">
+                        <div class="sort-by">
+                            <span>Sort by</span>
+                            <button class="sort-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M3.5 3.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L3.5 12.293V3.5z"/>
+                                    <path d="M7 14.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M8 11a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M9.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M11 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search">
+                            <button class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="mark-all-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                            </svg>
+                            Mark All
+                        </button>
+                    </div>
+                </div>
+
+                <div class="alerts-table-container">
+                    <table class="alerts-table">
+                        <thead>
+                            <tr>
+                                <th>Priority</th>
+                                <th>Board ID</th>
+                                <th>Location</th>
+                                <th>Alert Type</th>
+                                <th>Duration</th>
+                                <th>Status</th>
+                                <th>Assigned To</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="alerts-table-body">
+                            <!-- Sample data to match the image -->
+                            <tr>
+                                <td><span class="priority-badge priority-high">HIGH</span></td>
+                                <td>0001</td>
+                                <td>Location1</td>
+                                <td>Power Loss</td>
+                                <td>2h 15m</td>
+                                <td class="status-unresolved">Unresolved</td>
+                                <td>--</td>
+                                <td><a href="#" class="action-button">[Resolve]</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="priority-badge priority-high">HIGH</span></td>
+                                <td>0002</td>
+                                <td>Location2</td>
+                                <td>Lights OFF</td>
+                                <td>50m</td>
+                                <td class="status-assigned">Assigned</td>
+                                <td>Agent xyz</td>
+                                <td><a href="#" class="action-button">[View]</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="priority-badge priority-high">HIGH</span></td>
+                                <td>0003</td>
+                                <td>Location3</td>
+                                <td>Weak Signal</td>
+                                <td>1h 30m</td>
+                                <td class="status-assigned">Assigned</td>
+                                <td>Agent xyz</td>
+                                <td><a href="#" class="action-button">[Resolve]</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="priority-badge priority-medium">MEDIUM</span></td>
+                                <td>0003</td>
+                                <td>Location1</td>
+                                <td>Power Loss</td>
+                                <td>3h 10m</td>
+                                <td class="status-resolved">Resolved</td>
+                                <td>Agent xyz</td>
+                                <td><a href="#" class="action-button">[Locate]</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="priority-badge priority-medium">MEDIUM</span></td>
+                                <td>0004</td>
+                                <td>Location1</td>
+                                <td>Power Loss</td>
+                                <td>2h</td>
+                                <td class="status-resolved">Resolved</td>
+                                <td>Agent xyz</td>
+                                <td><a href="#" class="action-button">[Locate]</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="priority-badge priority-low">LOW</span></td>
+                                <td>0004</td>
+                                <td>Location1</td>
+                                <td>Power Loss</td>
+                                <td>2h</td>
+                                <td class="status-assigned">Assigned</td>
+                                <td>Agent xyz</td>
+                                <td><a href="#" class="action-button">[Resolve]</a></td>
+                            </tr>
+                            <tr>
+                                <td><span class="priority-badge priority-low">LOW</span></td>
+                                <td>0006</td>
+                                <td>Location1</td>
+                                <td>Power Loss</td>
+                                <td>1h</td>
+                                <td class="status-assigned">Assigned</td>
+                                <td>Agent xyz</td>
+                                <td><a href="#" class="action-button">[Resolve]</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="alerts.js"></script>
+</body>
+</html>

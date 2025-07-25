@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background: #0a0046;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.logo h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    flex: 1;
+}
+
+.nav-links li {
+    padding: 15px 25px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li.active-link {
+    background-color: white;
+}
+
+.nav-links li.active-link a {
+    color: #0a0046;
+}
+
+.nav-links li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-links li.active-link:hover {
+    background-color: white;
+}
+
+.logout {
+    padding: 15px 25px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logout-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.logout:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.top-nav h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.top-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.export-btn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.export-btn:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #0a0046;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.user-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.cards-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: auto;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Map Card */
+.map-card {
+    height: 350px;
+}
+
+#map-container {
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Uptime Graph */
+.uptime-graph {
+    height: 300px;
+}
+
+#uptime-chart {
+    height: 250px;
+}
+
+/* Status Chart */
+.status-chart {
+    height: auto;
+    padding: 20px;
+}
+
+.status-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-details {
+    flex: 1;
+}
+
+.pie-chart-container {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 10px;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.lights-on { background-color: #4CAF50; }
+.lights-off { background-color: #F44336; }
+.power-off { background-color: #FFC107; }
+
+.status-text {
+    flex: 1;
+    font-size: 14px;
+    color: #555;
+}
+
+.status-count {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Uptime Percentage */
+.uptime-percentage {
+    text-align: center;
+    padding: 20px;
+}
+
+.uptime-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+#uptime-percentage-container {
+    font-size: 42px;
+    font-weight: 600;
+    color: #4CAF50;
+    margin: 10px 0;
+}
+
+.uptime-subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Outages */
+.outages {
+    text-align: center;
+    padding: 20px;
+}
+
+.outages-title {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.outages-count {
+    font-size: 42px;
+    font-weight: 600;
+    color: #3F51B5;
+    margin: 10px 0;
+}
+
+.outages-subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        padding: 15px 0;
+    }
+    
+    .logo h1 {
+        display: none;
+    }
+    
+    .nav-links li a span,
+    .logout a span {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 70px;
+    }
+    
+    .status-content-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .pie-chart-container {
+        align-self: center;
+    }
+}

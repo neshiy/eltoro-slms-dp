@@ -1,0 +1,217 @@
+/* Analytics Page Specific Styles */
+
+/* Top Navigation with Export Button */
+.top-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.export-btn {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.export-btn:hover {
+    text-decoration: underline;
+}
+
+/* User Icon (Box) */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #1a1052;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.user-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Analytics Content Layout */
+.analytics-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding: 0;
+}
+
+/* Top Performing Regions Card */
+.regions-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 300px;
+    margin-bottom: 0;
+}
+
+.regions-container {
+    margin-top: 20px;
+}
+
+.region-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.region-name {
+    width: 100px;
+    font-weight: 500;
+}
+
+.region-bar-container {
+    flex: 1;
+    height: 30px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.region-bar {
+    height: 100%;
+    background-color: #00c853;
+    border-radius: 4px;
+}
+
+/* Uptime Today Card */
+.uptime-today-card {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.uptime-circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.uptime-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 15px solid #00c853;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.uptime-percentage {
+    font-size: 32px;
+    font-weight: 600;
+    color: #00c853;
+}
+
+/* Outages Bar Chart Card */
+.outages-bar-card {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: 300px;
+}
+
+.outages-bar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.outage-bar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+}
+
+.outage-bar {
+    width: 40px;
+    background-color: #0a0046;
+    border-radius: 4px;
+}
+
+.outage-label {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Outages Radar Chart Card */
+.outages-radar-card {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 300px;
+}
+
+#outages-radar-chart {
+    height: 250px;
+}
+
+/* Visibility Impact Score Card */
+.visibility-card {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    height: 300px;
+}
+
+#visibility-radar-chart {
+    height: 250px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .analytics-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .regions-card,
+    .uptime-today-card,
+    .outages-bar-card,
+    .outages-radar-card,
+    .visibility-card {
+        grid-column: 1 / 2;
+    }
+    
+    .regions-card {
+        grid-row: 1 / 2;
+    }
+    
+    .uptime-today-card {
+        grid-row: 2 / 3;
+    }
+    
+    .outages-bar-card {
+        grid-row: 3 / 4;
+    }
+    
+    .outages-radar-card {
+        grid-row: 4 / 5;
+    }
+    
+    .visibility-card {
+        grid-row: 5 / 6;
+    }
+}

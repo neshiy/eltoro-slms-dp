@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ELTORO SLMS Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Side Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>ELTORO SLMS</h1>
+            </div>
+            <ul class="nav-links">
+                <li class="active-link"><a href="dashboard.html"><span>Dashboard</span></a></li>
+                <li><a href="boards.html"><span>Boards</span></a></li>
+                <li><a href="alerts.html"><span>Alerts</span></a></li>
+                <li><a href="analytics.html"><span>Analytics</span></a></li>
+                <li><a href="#"><span>Settings</span></a></li>
+            </ul>
+            <div class="logout">
+                <a href="login.html"><span>Log out</span> <i class="logout-icon"></i></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-nav">
+                <h2>Dashboard</h2>
+                <div class="top-nav-actions">
+                    <button class="export-btn">Export</button>
+                    <div class="profile">
+                        <div class="profile-icon">
+                            <i class="user-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Cards -->
+            <div class="dashboard-cards">
+                <!-- Left Column -->
+                <div class="cards-column left-column">
+                    <!-- Map Card -->
+                    <div class="card map-card">
+                        <div id="map-container"></div>
+                    </div>
+                    
+                    <!-- Uptime Line Graph -->
+                    <div class="card uptime-graph">
+                        <h3>Uptime (Last 30 Days)</h3>
+                        <canvas id="uptime-chart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Right Column -->
+                <div class="cards-column right-column">
+                    <!-- Boards by Status Pie Chart -->
+                    <div class="card status-chart">
+                        <h3>Boards by Status</h3>
+                        <div class="status-content-wrapper">
+                            <div class="status-details">
+                                <div class="status-item">
+                                    <span class="status-dot lights-on"></span>
+                                    <span class="status-text">Lights On</span>
+                                    <span class="status-count">832</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot lights-off"></span>
+                                    <span class="status-text">Lights Off</span>
+                                    <span class="status-count">120</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot power-off"></span>
+                                    <span class="status-text">Power Off</span>
+                                    <span class="status-count">48</span>
+                                </div>
+                            </div>
+                            <div class="pie-chart-container">
+                                <canvas id="status-pie-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Uptime Percentage -->
+                    <div class="card uptime-percentage">
+                        <div class="uptime-title">Uptime</div>
+                        <div id="uptime-percentage-container">98.7%</div>
+                        <div class="uptime-subtitle">Last 24 Hours</div>
+                    </div>
+                    
+                    <!-- Outages -->
+                    <div class="card outages">
+                        <div class="outages-title">Outages</div>
+                        <div class="outages-count">30</div>
+                        <div class="outages-subtitle">Last 7 days</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

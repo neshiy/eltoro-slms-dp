@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="analytics.css">
+    <title>ELTORO SLMS Analytics</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Side Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>ELTORO SLMS</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><span>Dashboard</span></a></li>
+                <li><a href="boards.html"><span>Boards</span></a></li>
+                <li><a href="alerts.html"><span>Alerts</span></a></li>
+                <li class="active-link"><a href="analytics.html"><span>Analytics</span></a></li>
+                <li><a href="#"><span>Settings</span></a></li>
+            </ul>
+            <div class="logout">
+                <a href="login.html"><span>Log out</span> <i class="logout-icon"></i></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-nav">
+                <h2>Analytics</h2>
+                <div class="top-nav-actions">
+                    <button class="export-btn">Export</button>
+                    <div class="profile">
+                        <div class="profile-icon">
+                            <i class="user-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Content -->
+            <div class="analytics-content">
+                <!-- Top Performing Regions -->
+                <div class="card regions-card">
+                    <h3>Top Performing Regions (Weekly)</h3>
+                    <div class="regions-container">
+                        <div class="region-item">
+                            <span class="region-name">Colombo</span>
+                            <div class="region-bar-container">
+                                <div class="region-bar" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="region-item">
+                            <span class="region-name">Galle</span>
+                            <div class="region-bar-container">
+                                <div class="region-bar" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="region-item">
+                            <span class="region-name">Kandy</span>
+                            <div class="region-bar-container">
+                                <div class="region-bar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Uptime Today -->
+                <div class="card uptime-today-card">
+                    <div class="uptime-circle-container">
+                        <div class="uptime-circle">
+                            <span class="uptime-percentage">95.2%</span>
+                        </div>
+                    </div>
+                    <h3>Uptime Today</h3>
+                </div>
+
+                <!-- Outages Bar Chart -->
+                <div class="card outages-bar-card">
+                    <h3>Outages</h3>
+                    <div class="outages-bar-container">
+                        <div class="outage-bar-item">
+                            <div class="outage-bar" style="height: 100px;"></div>
+                            <span class="outage-label">Week 1</span>
+                        </div>
+                        <div class="outage-bar-item">
+                            <div class="outage-bar" style="height: 80px;"></div>
+                            <span class="outage-label">Week 2</span>
+                        </div>
+                        <div class="outage-bar-item">
+                            <div class="outage-bar" style="height: 60px;"></div>
+                            <span class="outage-label">Week 3</span>
+                        </div>
+                        <div class="outage-bar-item">
+                            <div class="outage-bar" style="height: 40px;"></div>
+                            <span class="outage-label">Week 4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outages Radar Chart -->
+                <div class="card outages-radar-card">
+                    <h3>Outages</h3>
+                    <canvas id="outages-radar-chart"></canvas>
+                </div>
+
+                <!-- Visibility Impact Score -->
+                <div class="card visibility-card">
+                    <h3>Visibility Impact Score</h3>
+                    <canvas id="visibility-radar-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script src="analytics.js"></script>
+</body>
+</html>

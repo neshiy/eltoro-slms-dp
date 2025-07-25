@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boards.css">
+    <title>ELTORO SLMS Boards</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Side Navigation -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>ELTORO SLMS</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html"><span>Dashboard</span></a></li>
+                <li class="active-link"><a href="boards.html"><span>Boards</span></a></li>
+                <li><a href="alerts.html"><span>Alerts</span></a></li>
+                <li><a href="analytics.html"><span>Analytics</span></a></li>
+                <li><a href="#"><span>Settings</span></a></li>
+            </ul>
+            <div class="logout">
+                <a href="login.html"><span>Log out</span> <i class="logout-icon"></i></a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-nav">
+                <h2>Board Status</h2>
+                <div class="profile">
+                    <div class="profile-icon">
+                        <i class="user-icon"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Board Button -->
+            <div class="add-board-container">
+                <button class="add-board-button">ADD BOARD</button>
+            </div>
+
+            <!-- Boards Content -->
+            <div class="boards-content">
+                <div class="boards-header">
+                    <h3>Board Status</h3>
+                    <div class="boards-actions">
+                        <div class="sort-by">
+                            <span>Sort by</span>
+                            <button class="sort-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M3.5 3.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L3.5 12.293V3.5z"/>
+                                    <path d="M7 14.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M8 11a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M9.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                                    <path d="M11 5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search">
+                            <button class="search-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="boards-table-container">
+                    <table class="boards-table">
+                        <thead>
+                            <tr>
+                                <th>Board ID</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Last Update</th>
+                                <th>Power</th>
+                            </tr>
+                        </thead>
+                        <tbody id="boards-table-body">
+                            <!-- Sample data to match the image -->
+                            <tr>
+                                <td>0001</td>
+                                <td>Location1</td>
+                                <td><span class="status-badge status-on">ON</span></td>
+                                <td>2 mins ago</td>
+                                <td>ON</td>
+                            </tr>
+                            <tr>
+                                <td>0001</td>
+                                <td>Location2</td>
+                                <td><span class="status-badge status-out">OUT</span></td>
+                                <td>7 mins ago</td>
+                                <td>OUT</td>
+                            </tr>
+                            <tr>
+                                <td>0001</td>
+                                <td>Location3</td>
+                                <td><span class="status-badge status-on">ON</span></td>
+                                <td>1 hour ago</td>
+                                <td>ON</td>
+                            </tr>
+                            <tr>
+                                <td>0001</td>
+                                <td>Location4</td>
+                                <td><span class="status-badge status-off">OFF</span></td>
+                                <td>2 hours ago</td>
+                                <td>OFF</td>
+                            </tr>
+                            <tr>
+                                <td>0001</td>
+                                <td>Location1</td>
+                                <td><span class="status-badge status-on">ON</span></td>
+                                <td>2 mins ago</td>
+                                <td>ON</td>
+                            </tr>
+                            <tr>
+                                <td>0001</td>
+                                <td>Location2</td>
+                                <td><span class="status-badge status-out">OUT</span></td>
+                                <td>7 mins ago</td>
+                                <td>OUT</td>
+                            </tr>
+                            <tr>
+                                <td>0001</td>
+                                <td>Location3</td>
+                                <td><span class="status-badge status-on">ON</span></td>
+                                <td>1 hour ago</td>
+                                <td>ON</td>
+                            </tr>
+                            <tr>
+                                <td>0001</td>
+                                <td>Location4</td>
+                                <td><span class="status-badge status-off">OFF</span></td>
+                                <td>2 hours ago</td>
+                                <td>OFF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="boards.js"></script>
+</body>
+</html>
